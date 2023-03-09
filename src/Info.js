@@ -1,23 +1,25 @@
 import "./Info.css";
+import { AiFillStar } from "react-icons/ai";
 
-function Info() {
+function Info({ dataset }) {
   return (
     <div className="parentInfo">
       <div className="infoBox">
         <div className="text-rating">
-          <div className="">4.9</div>
-          <div className="">Star</div>
+          <div className="">{dataset.rating}</div>
+          <div className="star-flex">
+            <AiFillStar />
+            <AiFillStar />
+            <AiFillStar />
+            <AiFillStar />
+            <AiFillStar />
+          </div>
         </div>
         <div className="text-name">
-          <div className="">Prankur Gupta</div>
-          <div className="">SDE @Amazon</div>
+          <div className="">{dataset.name}</div>
+          <div className="">{dataset.position}</div>
         </div>
-        <div className="paragraph">
-          I am a Senior Software Developer American Express. Have been
-          passionately solving Leetcode, HackerRank, Codechef, Codeforces
-          problems, and enthusiastically solving problems with the analysis of
-          space.
-        </div>
+        <div className="paragraph">{dataset.description}</div>
         <button className="buttonSession">Book A session</button>
       </div>
     </div>

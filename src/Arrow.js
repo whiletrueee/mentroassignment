@@ -1,22 +1,23 @@
-function Arrow({ rotateLeft, rotateRight, degree }) {
+import { AiOutlineArrowDown } from "react-icons/ai";
+function Arrow({ rotateLeft, rotateRight, dataset }) {
   return (
     <div className="imageBottom">
       <div className="flex-arrow">
-        <div className="" onClick={rotateLeft()}>
-          Left
-        </div>
-        <div className="">
+        <button className="downbutton" onClick={() => rotateLeft()}>
+          <AiOutlineArrowDown size={30}/>
+        </button>
+        <div className="image-text-flex">
           <img
-            src={degree.image}
+            src={dataset.image}
             alt="person"
-            width={"160px"}
-            height={"160px"}
+            width={"220px"}
+            height={"220px"}
           />
-          <div className="mentorName">{degree.name}</div>
+          <div className="mentorName">{dataset.name}</div>
         </div>
-        <div className="" onClick={rotateRight()}>
-          Right
-        </div>
+        <button className="downbutton" onClick={() => rotateRight()}>
+          <AiOutlineArrowDown size={30} />
+        </button>
       </div>
     </div>
   );

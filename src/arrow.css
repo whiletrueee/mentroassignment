@@ -37,4 +37,21 @@
   font-weight: 700;
   text-align: center;
   margin-top: 20px;
+  width: 15rem;
+}
+
+.image-text-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.downbutton{
+  background-color: #4CAF50;
+  border-radius: 50%;
+  color: white;
+  height: 3rem;
+  width: 3rem;
+  border: none;
 }

@@ -1,8 +1,8 @@
 import Circle from "./circle";
 import Info from "./Info";
 import Arrow from "./Arrow";
+import { useEffect, useState } from "react";
 import "./arrow.css";
-import { useState } from "react";
 import Image1 from "./asset/image1.png";
 import Image2 from "./asset/image2.png";
 import Image3 from "./asset/image3.png";
@@ -10,9 +10,8 @@ import Image4 from "./asset/image4.png";
 import Image5 from "./asset/image5.png";
 
 function App() {
-  const [degree, setDegree] = useState([
+  const dataset = [
     {
-      deg: 0,
       name: "Prankur Gupta",
       rating: 4.9,
       image: Image1,
@@ -21,7 +20,6 @@ function App() {
       position: "SDE @Amazon",
     },
     {
-      deg: 45,
       name: "Saurav Pal",
       rating: 5.0,
       image: Image2,
@@ -30,7 +28,6 @@ function App() {
       position: "SDE-2 @Amazon",
     },
     {
-      deg: 90,
       name: "Saumya Singh",
       rating: 5.0,
       image: Image3,
@@ -39,7 +36,6 @@ function App() {
       position: "Software Engineer @Red Hat",
     },
     {
-      deg: 135,
       name: "Keshav Bathla",
       rating: 5.0,
       image: Image4,
@@ -48,7 +44,6 @@ function App() {
       position: "SDE-1 @Groww",
     },
     {
-      deg: 180,
       name: "Ankita",
       rating: 5.0,
       image: Image5,
@@ -56,9 +51,12 @@ function App() {
         "Working my way to build the world's future product. Machine Learning Engineer, Data and Technology Evangelist I breathe in developing software with intelligence. I have been involved with startups like DailyHunt, Firework Hq, MagilHub to build the AI end of their products. ",
       position: "ML Engineer @Firework",
     },
-  ]);
+  ];
+
+  const [degree, setDegree] = useState([0, 45, 90, 135, 180]);
 
   const rotateRight = () => {
+    console.log("right");
     const neww = [...degree];
     const temp = neww[neww.length - 1];
     for (let i = neww.length - 1; i > 0; i--) {
@@ -69,6 +67,7 @@ function App() {
   };
 
   const rotateLeft = () => {
+    console.log("left");
     const neww = [...degree];
     const temp = neww[0];
     for (let i = 0; i < neww.length - 1; i++) {
@@ -78,18 +77,18 @@ function App() {
     setDegree(neww);
   };
 
+  useEffect(() => {
+    console.log(degree);
+  }, [degree]);
+
   return (
     <div className="screen">
-      <Info />
-      <Circle
-        rotateLeft={rotateLeft}
-        rotateRight={rotateRight}
-        degree={degree}
-      />
+      <Info dataset={dataset[degree.indexOf(90)]} />
+      <Circle degree={degree} dataset={dataset} />
       <Arrow
+        dataset={dataset[degree.indexOf(90)]}
         rotateLeft={rotateLeft}
         rotateRight={rotateRight}
-        // degree={degree[0]}
       />
     </div>
   );

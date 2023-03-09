@@ -89,7 +89,7 @@ function App() {
       <Arrow
         rotateLeft={rotateLeft}
         rotateRight={rotateRight}
-        degree={degree[2]}
+        // degree={degree[0]}
       />
     </div>
   );

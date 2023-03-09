@@ -1,4 +1,4 @@
-function Arrow({ data, rotateLeft, rotateRight }) {
+function Arrow({ rotateLeft, rotateRight, degree }) {
   return (
     <div className="imageBottom">
       <div className="flex-arrow">
@@ -6,8 +6,13 @@ function Arrow({ data, rotateLeft, rotateRight }) {
           Left
         </div>
         <div className="">
-          <div className="mainImage">Image</div>
-          <div className="mentorName">{data.name}</div>
+          <img
+            src={degree.image}
+            alt="person"
+            width={"160px"}
+            height={"160px"}
+          />
+          <div className="mentorName">{degree.name}</div>
         </div>
         <div className="" onClick={rotateRight()}>
           Right

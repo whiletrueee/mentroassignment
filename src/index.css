@@ -5,9 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #4CAF50;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.screen{
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.maskEllipse {
+  -webkit-mask-clip: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-clip: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  z-index: 0;
+}
+
+/* .ellipse{
+  background-color: #8cffa0;
+  -webkit-mask-image: -webkit-radial-gradient(ellipse 70% 100%, transparent 50%, black 50%);
+  mask-image: url("../public/elipse.svg");
+  mask-position: bottom;
+} */
+
+.bggreen{
+  background-color: #4CAF50;
 }

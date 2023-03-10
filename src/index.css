@@ -1,26 +1,53 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.screen{
+.screen {
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
+.mobile {
+  display: none;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 1080px) {
+  /* For tablets: */
+  .screen {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+}
+
 .maskEllipse {
-  -webkit-mask-clip: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  -webkit-mask-clip: radial-gradient(
+    ellipse,
+    black 50%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
   mask-clip: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
   z-index: 0;
 }
@@ -32,6 +59,6 @@ code {
   mask-position: bottom;
 } */
 
-.bggreen{
-  background-color: #4CAF50;
+.bggreen {
+  background-color: #4caf50;
 }

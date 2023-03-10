@@ -83,15 +83,20 @@ function App() {
   }, [degree]);
 
   return (
-    <div className="screen">
-      <Info dataset={dataset[degree.indexOf(90)]} />
-      <Circle degree={degree} dataset={dataset} />
-      <Arrow
-        dataset={dataset[degree.indexOf(90)]}
-        rotateLeft={rotateLeft}
-        rotateRight={rotateRight}
-      />
-    </div>
+    <>
+      <div className="screen">
+        <Info dataset={dataset[degree.indexOf(90)]} />
+        <Circle degree={degree} dataset={dataset} />
+        <Arrow
+          dataset={dataset[degree.indexOf(90)]}
+          rotateLeft={rotateLeft}
+          rotateRight={rotateRight}
+        />
+      </div>
+      <div className="mobile">
+        This app can only be viewed on a desktop screen
+      </div>
+    </>
   );
 }
 

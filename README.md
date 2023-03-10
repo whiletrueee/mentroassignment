@@ -3,7 +3,7 @@
 I have completed the objectives of this assignment and tried to fullfill all the requirements. deployed link has been given below .
 
 Patiently waiting for your reply.<br />
-![deployed url](https://mentroassignment.vercel.app/)
+[deployed url](https://mentroassignment.vercel.app/)
 
 
 ## screen shots

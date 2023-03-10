@@ -3,6 +3,12 @@ import { AiFillStar } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 function Info({ dataset }) {
+  
+  const variants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="parentInfo">
       <div className="infoBox">
@@ -17,13 +23,7 @@ function Info({ dataset }) {
           </div>
         </div>
         <div className="text-name">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className=""
-          >
+          <motion.div variants={variants} initial="initial" animate="animate">
             {dataset.name}
           </motion.div>
           <div className="">{dataset.position}</div>

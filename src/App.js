@@ -62,6 +62,7 @@ function App() {
     for (let i = neww.length - 1; i > 0; i--) {
       neww[i] = neww[i - 1];
     }
+
     neww[0] = temp;
     setDegree(neww);
   };

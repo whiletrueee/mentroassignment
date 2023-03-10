@@ -1,6 +1,5 @@
-
 import "./circle.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Circle({ degree, dataset }) {
   return (
@@ -9,17 +8,14 @@ function Circle({ degree, dataset }) {
         <div className="circle-wrapper">
           {degree.map((data, index) => {
             return (
-              <motion.div
-                key={index}
-                className={`circle deg-${data} `}
-              >
+              <div key={index} className={`circle deg-${data}`}>
                 <img
                   src={dataset[index].image}
                   alt="person"
                   width={"160px"}
                   height={"160px"}
                 />
-              </motion.div>
+              </div>
             );
           })}
         </div>

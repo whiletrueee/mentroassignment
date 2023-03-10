@@ -21,6 +21,7 @@
   text-align: center;
   line-height: 150px;
   transform-origin: center;
+  transition: transform 0.5s ease-out;
 }
 
 .flex-circlearea {
@@ -63,6 +64,10 @@
 
 .deg-180 {
   transform: rotate(-180deg) translate(351px) rotate(180deg);
+}
+
+.deg-220 {
+  transform: rotate(-220deg) translate(351px) rotate(220deg);
 }
 
 .bggreen {

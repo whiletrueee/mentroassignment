@@ -55,3 +55,7 @@
   width: 3rem;
   border: none;
 }
+
+.imageanimate{
+  transition-delay: 4s;
+}

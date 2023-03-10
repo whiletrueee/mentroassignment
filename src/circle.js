@@ -1,5 +1,4 @@
 import "./circle.css";
-import { motion, AnimatePresence } from "framer-motion";
 
 function Circle({ degree, dataset }) {
   return (

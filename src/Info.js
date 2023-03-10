@@ -1,13 +1,7 @@
 import "./Info.css";
 import { AiFillStar } from "react-icons/ai";
-import { motion } from "framer-motion";
 
 function Info({ dataset }) {
-  
-  const variants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-  };
 
   return (
     <div className="parentInfo">
@@ -23,9 +17,9 @@ function Info({ dataset }) {
           </div>
         </div>
         <div className="text-name">
-          <motion.div variants={variants} initial="initial" animate="animate">
+          <div>
             {dataset.name}
-          </motion.div>
+          </div>
           <div className="">{dataset.position}</div>
         </div>
         <div className="paragraph">{dataset.description}</div>
